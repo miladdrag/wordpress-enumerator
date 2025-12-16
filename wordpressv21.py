@@ -8,7 +8,7 @@ import webbrowser
 import tkinter as tk
 from tkinter import ttk, messagebox, filedialog
 
-# تنظیمات
+#  تنظیمات برنامه
 TIMEOUT = 8
 USER_AGENT = "WP-Enum/1.0"
 KEYWORDS = ["yoast", "jetpack", "woocommerce", "elementor", "contact-form-7"]
@@ -26,7 +26,7 @@ class WordPressEnumerator:
         self.results = []
         self.start_time = None
 
-        # رنگ‌های تم تیره
+        # پالت های رنگی
         self.colors = {
             "bg": "#000000",
             "panel": "#0a0a0a",
@@ -74,7 +74,7 @@ class WordPressEnumerator:
         tk.Button(toolbar, text="⇩ CSV", command=self.export_csv, relief="flat", padx=10, pady=6).pack(side="left", padx=4)
         tk.Button(toolbar, text="⇩ Log", command=self.export_log, relief="flat", padx=10, pady=6).pack(side="left", padx=4)
 
-        # ستون چپ: تنظیمات و لاگ
+        #  تنظیمات و لاگ
         left_panel = tk.Frame(container)
         left_panel.grid(row=2, column=0, sticky="ns", padx=(12, 6))
 
@@ -112,7 +112,7 @@ class WordPressEnumerator:
         self.log_text.tag_config("FOUND", foreground=self.colors["accept"])
         self.log_text.tag_config("ERROR", foreground=self.colors["error"])
 
-        # ستون راست: نتایج
+        #  نتایج
         right_panel = tk.Frame(container)
         right_panel.grid(row=2, column=1, sticky="nsew", padx=(6, 12))
         
@@ -519,3 +519,4 @@ if __name__ == "__main__":
     root = tk.Tk()
     WordPressEnumerator(root)
     root.mainloop()
+
